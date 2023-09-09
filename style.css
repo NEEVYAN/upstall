@@ -1,0 +1,567 @@
+/* #C24040 */
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* font-family: 'Abhaya Libre', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+/* ==============ROOT======================= */
+
+:root {
+    --body-color: #000;
+    --container-color: #FFFFFF;
+    --header-height: 3rem;
+    --text-color: #fff;
+    --main-color: #C24040;
+
+
+    /* ===================fonts */
+    /* --font-family:'Abhaya Libre', serif; */
+    --big-font: 2.5rem;
+    --h1-size: 6rem;
+    --h2-size: 3rem;
+    --h3-size: 1rem;
+    --h4-size: 0.75rem;
+    --p-font: 0.93rem;
+    --small-font: 0.81rem;
+
+    --font-weight: 500;
+    --font-more-weight: 600;
+
+    /* margin  */
+
+    --m-1: .5rem;
+    --m-2: 1rem;
+    --m-3: 1.5rem;
+    --m-4: 2rem;
+    --m-5: 2.5rem;
+    --m-6: 3rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--body-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+    padding: 27px 8%;
+    z-index: 1000;
+    transition: all .7s;
+}
+
+.logo {
+    font-size: 37px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: 'Abhaya Libre', serif;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+
+}
+
+.navbar a {
+    font-weight: 400;
+    margin: 15px 20px;
+    color: var(--text-color);
+    font-size: var(--p-font);
+    transition: all .5s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transform: scale(1.5);
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_right a:first-child {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    margin-right: 18px;
+}
+
+.header_right a {
+    color: var(--text-color);
+    margin-right: 16px;
+    margin-left: 4px;
+    transition: all .5s ease;
+}
+
+.header_right a:hover {
+
+    color: var(--main-color);
+    transform: scale(1.2);
+}
+
+.menu {
+    color: var(--text-color);
+    margin-right: 16px;
+    margin-left: 4px;
+    display: none;
+    transition: all .5s ease;
+}
+
+section {
+    padding: 70px 15% 60px;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.home-content h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+    color: rgb(134, 132, 132);
+}
+
+.home-content h1 {
+    font-size: var(--h1-size);
+    font-weight: 500;
+    line-height: 1.2;
+    font-weight: 800;
+    font-family: 'Abhaya Libre', serif;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: rgb(134, 132, 132);
+}
+
+.button {
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    width: 180px;
+    margin: 20px 0px;
+    text-align: center;
+    padding: 25px;
+    /* background-color: var(--main-color);*/
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all .5s;
+}
+
+.button:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+header.sticky {
+    padding: 8px 17%;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.row-img {
+    border: 2px double #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.row-img img {
+    width: 100%;
+    display: block;
+    transition: transform .7s;
+}
+
+.row-img img:hover {
+    transform: scale(1.16);
+}
+
+
+.feature-content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Abhaya Libre', serif;
+    transition: all .5s ease;
+    letter-spacing: 2px;
+}
+
+.feature-content h4:hover {
+    color: var(--main-color);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-img img:hover {
+    animation: about 1 linear 1s;
+}
+
+@keyframes about {
+    0% {
+        filter: blur(1px);
+    }
+
+    50% {
+        transform: scale(.98);
+    }
+}
+
+.about-text h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--main-color);
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-size: var(--h2-size);
+    line-height: .8;
+    margin-bottom: 5px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.about-text p {
+    font-size: var(--p-font);
+    line-height: 19px;
+    color: rgb(221, 219, 219);
+}
+
+
+.faq {
+    padding: 60px 8% 60px;
+}
+
+.container {
+    position: inherit;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.box-content {
+
+    position: relative;
+    justify-content: center;
+    width: 333px;
+    height: 455px;
+    background-color: rgb(25, 24, 24);
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 8px 10px 6px rgb(51, 51, 51);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.box-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.box-content p {
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgb(221, 219, 219);
+    ;
+    font-weight: 300;
+}
+
+.box-content::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.box-content::after {
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(45% at 90% 10%);
+    transition: 0.5s;
+    ;
+}
+
+.box-content .count {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.box-content:nth-child(2)::after {
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.box-content:nth-child(3)::after {
+    background-color: rgb(27, 163, 47);
+    background-image: linear-gradient(160deg, rgb(27, 163, 47) 0%, #61e4d4 100%);
+}
+
+.box-content:hover::after {
+    clip-path: circle(100% at 90% 20%);
+
+}
+
+/* ==============================CONTACT us============================= */
+
+.contact-bg {
+    padding: 5%;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.8)), url(./images/bg.png);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-bg h3 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contact-bg h2 {
+    font-size: var(--h2-size);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.contact-bg p {
+    font-size: var(--p-font);
+    letter-spacing: 2px;
+
+}
+
+.contact-body {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-info {
+
+    display: flex;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+    gap: 3rem 12rem;
+
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+.contact-info span {
+
+    display: block;
+
+}
+
+.contact-info span {
+
+    color: var(--text-color);
+}
+
+.contact-info span i {
+    font-size: 2.5rem;
+    padding-bottom: 0.9rem;
+    color: var(--main-color);
+}
+
+.contact-info div span:nth-child(2) {
+
+    font-weight: 500;
+    font-size: 1.1rem;
+
+}
+
+.contact-info .text {
+    padding-top: 0.4rem;
+}
+
+.contact-form {
+
+    display: flex;
+    padding: 2rem 0;
+    border-top: 1px solid rgb(134, 132, 132);
+
+}
+
+.contact-form form {
+
+    position: relative;
+    z-index: 100;
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    font-size: 17px;
+    color: var(--text-color);
+    padding: 1.5rem;
+    outline: 0;
+    margin: .7rem 0;
+    border-radius: 5px;
+    font-family: 'Abhaya Libre', serif;
+    background-color: rgb(45, 45, 45);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 6px -3px rgba(245, 245, 245, 0.5);
+}
+
+.contact-form form div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+
+.contact-form>div {
+    margin: 0 auto;
+    justify-self: center;
+}
+
+.map iframe {
+    filter: grayscale(100%) invert(100%);
+    border: solid 2px;
+}
+
+.contact-footer {
+    margin:5% 0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contact-footer h3 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.social-links {
+    margin: 20px 0px;
+}
+
+.social-links a {
+    gap: 30px;
+    margin: 10px 10px;
+}
+
+.social-links a i {
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+/* ====================================================== */
+
+html {
+    height: 100%;
+}
+
+#canvas {
+    position: absolute;
+    background-color: #000;
+    width: 98%;
+    height: 100%;
+}
+
+/* ====================== */
