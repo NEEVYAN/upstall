@@ -5,6 +5,15 @@ window.addEventListener("scroll",function()
 })
 
 
+let menu=document.querySelector("#menu");
+let navbar=document.querySelector(".navbar");
+menu.onclick=()=>
+{
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('open');
+}
+
+
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 

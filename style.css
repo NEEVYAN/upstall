@@ -95,7 +95,6 @@ span {
 
 .navbar a:hover {
     color: var(--main-color);
-    transform: scale(1.5);
 }
 
 .header_right {
@@ -565,3 +564,125 @@ html {
 }
 
 /* ====================== */
+
+/* media qeury */
+
+@media (max-width:1700px)
+{
+    header
+    {
+        padding: 18px 8%;
+    }
+    /* header.sticky
+    {
+        padding: 7px 8%;
+    } */
+    section
+    {
+        padding: 50px 8% 40px;
+    }
+}
+
+@media (max-width:1200px)
+{
+    header
+    {
+        padding: 14px 5%;
+    }
+   
+    section
+    {
+        padding: 45px 5% 35px;
+    }
+    :root
+    {
+        --h1-size: 3.8rem;
+        --h2-size: 2.5rem;
+        --h3-size: 13px;
+    }
+}
+
+@media (max-width:1050px)
+{
+
+
+    .feature-content
+    {
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    }
+    .row-img {
+        width: 100px;
+        height: 100px;
+    }
+    .about
+    {
+        gap: 3rem;
+    }
+
+
+    #menu
+    {
+        display: block;
+    }
+
+    .navbar
+    {
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 60px;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background:var(--body-color);
+        transition: all .50s ease;
+    }
+
+    .navbar a
+    {
+        display: block;
+        color: #979797;
+        padding: 0;
+        margin: 0 0 40px 0;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .navbar.open
+    {
+        left: 0;
+    }
+}
+
+
+@media (max-width:800px)
+{
+  
+    .about
+    {
+        grid-template-columns: 1fr;
+    }
+   
+}
+
+@media (max-width:600px)
+{
+  
+    :root
+    {
+        --h1-size: 2.2rem;
+        --h2-size: 2rem;
+        --h3-size: 13px;
+    }
+
+     header.sticky
+    {
+        padding: 7px 5%;
+    }
+
+}
+
+

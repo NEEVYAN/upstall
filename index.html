@@ -33,7 +33,7 @@
       <a href="#" class="logo">Up<span>stall</span></a>
 
       <ul class="navbar">
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">FAQs</a></li>
         <li><a href="#">Let's talk</a></li>
@@ -45,13 +45,13 @@
         <a href="#"><i class="ri-instagram-line"></i></a>
         <a href=""><i class="ri-messenger-line"></i></a>
         <a href="#"><i class="ri-telegram-line"></i></a>
-        <div class="menu"><i class="ri-menu-2-line"></i></div>
+        <div class="menu" id="menu"><i class="ri-menu-2-line"></i></div>
       </div>
     </header>
 
     <!-- =======================HOME========================= -->
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="home-content">
         <h4>TASTY AD's</h4>
         <h1>Lorem, ipsum dolor. <br />Lorem, ipsum.</h1>
@@ -93,12 +93,12 @@
     <!-- =============================ABOUT====================================================================== -->
     <section class="about">
       <div class="about-img">
-        <img src="images/bath.jpeg" alt="" />
+        <img src="images/bath.jpeg" data-aos="fade-up-right" alt="" />
       </div>
 
 
 
-      <div class="about-text">
+      <div class="about-text" data-aos="fade-up-left">
         <h5>Lorem ipsum dolor sit.</h5>
         <h2>Lorem ipsum dolor sit amet consectetur.</h2>
         <p>
@@ -286,15 +286,16 @@
             <span> Location </span>
             <span class="text"> Lorem ipsum dolor sit amet. </span>
           </div>
-
-
       </div>
+
+      <br/>
+
 
     <!-- ==========================FORM FILL=================================================== -->
       
 
 
-      <section class="about contact-form">
+      <section class="about contact-form container">
         <div class="about-text">
           <form action="">
             <div>
@@ -341,9 +342,9 @@
               placeholder="message"
             ></textarea>
 
-
-            <a href="#" class="button">submit</a>
-
+            <div class="btn2">
+            <a href="#" class="button form-btn">submit</a>
+            </div>
           </form>
         </div>
         <canvas id="canvas"></canvas>
@@ -351,7 +352,7 @@
       </section>
 
       <!-- ============================MAPS========================================================================= -->
-      <!-- <div class="map" style="padding: 20px">
+      <div class="map" style="padding: 20px">
         <iframe
           class="maps2"
           id="maps2"
@@ -362,7 +363,7 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div> -->
+      </div>
 
 
       <!-- ============================FOOTER========================================================================= -->
@@ -377,5 +378,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: -450,
+        duration: 3000,
+      });
+    </script>
   </body>
 </html>
