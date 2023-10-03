@@ -696,6 +696,10 @@ html {
         font-size: 12px;
         transition: all .5s;
     }
+    .small
+    {
+        font-size: 8px;
+    }
 
 }
 
