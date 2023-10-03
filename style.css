@@ -243,8 +243,10 @@ header.sticky {
 }
 
 .about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid; */
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     gap: 9rem;
 
@@ -681,6 +683,14 @@ html {
      header.sticky
     {
         padding: 7px 5%;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    .reverse
+    {
+        flex-direction: column-reverse;
     }
 
     .button
